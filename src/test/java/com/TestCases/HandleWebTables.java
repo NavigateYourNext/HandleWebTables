@@ -1,4 +1,4 @@
-package org.TestCases;
+package com.TestCases;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import org.testng.annotations.Test;
 
 import jxl.read.biff.BiffException;
 
-public class NewTest {
+public class HandleWebTables {
 
 	public WebDriver driver;
 	ArrayList<String> str = new ArrayList<String>();
@@ -33,7 +33,7 @@ public class NewTest {
 	{
 		Runtime.getRuntime().exec("taskkill /f /im chrome.exe");
 
-		String browser = System.getProperty("user.dir")+"/resources/chromedriver.exe";
+		String browser = System.getProperty("user.dir")+"/resource/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", browser);
 
 		driver = new ChromeDriver();
@@ -58,7 +58,7 @@ public class NewTest {
 	@DataProvider
 	public Iterator<Object[]> getTestData() throws BiffException, IOException
 	{
-		ArrayList<Object[]> testData = getExcelData.getExcelData();
+		ArrayList<Object[]> testData = GetUserData.getExcelData();
 		return testData.iterator();
 	}
 
@@ -139,3 +139,4 @@ public class NewTest {
 		driver.quit();
 	}
 }
+

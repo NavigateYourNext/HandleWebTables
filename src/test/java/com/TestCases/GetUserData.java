@@ -1,4 +1,4 @@
-package org.TestCases;
+package com.TestCases;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,14 +9,14 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 
-public class getExcelData {
+public class GetUserData {
 
 
 	public static ArrayList<Object[]> getExcelData() throws BiffException, IOException
 	{
 		ArrayList<Object[]> list = new ArrayList<Object[]> ();
 
-		Workbook wb = Workbook.getWorkbook(new File(System.getProperty("user.dir")+"/resources/ListOfUsers.xls"));
+		Workbook wb = Workbook.getWorkbook(new File(System.getProperty("user.dir")+"/resource/ListOfUsers.xls"));
 		Sheet sh = wb.getSheet("UserList");
 
 
